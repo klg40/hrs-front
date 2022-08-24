@@ -28,10 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Start action!
-      
-      # Set ssh key
-      - name: Set ssh key
-        run: set -eu | mkdir "$HOME/.ssh" | chmod 600 "$HOME/.ssh"
         
       # Run build
       - name: Run build
