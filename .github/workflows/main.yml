@@ -43,3 +43,7 @@ jobs:
       # Run build
       - name: Run build
         run:  npm run build
+
+      # Rsync
+      - name: Rsync
+        run:  rsync -avz ./dist/ ${{ secrets.HRS_LOGIN }}@${{ secrets.HRS_HOST }}:/var/www/html
