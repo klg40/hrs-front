@@ -31,4 +31,4 @@ jobs:
         
       # Run build
       - name: Run build
-        run: npm ci | npm run build
+        run: npm i | npm run build
