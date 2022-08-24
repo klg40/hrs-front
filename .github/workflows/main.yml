@@ -45,13 +45,5 @@ jobs:
         run:  npm run build
 
       # Rsync
-      - name: Deploy to server
-        uses: AEnterprise/rsync-deploy@v1.0
-        env:
-          DEPLOY_KEY: ${{ secrets.SERVER_KEY }}
-          ARGS: "-avz"
-          SERVER_PORT: ${{ secrets.SSH_PORT }}
-          FOLDER: "./build/"
-          SERVER_IP: ${{ secrets.HRS_HOST }}
-          USERNAME: ${{ secrets.HRS_LOGIN }}
-          SERVER_DESTINATION: "/var/www/html/"
+      - name: Rsync
+        run:  rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./build/ root@62.113.98.233:/var/www/html/
