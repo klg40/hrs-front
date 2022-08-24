@@ -28,11 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Start action!
-
-      # Run build
-      - name: Set react-scripts
-        run: npm install react-scripts
         
       # Run build
       - name: Run build
-        run: npm i | npm run build
+        run: npm install react-scripts | npm i | npm run build
