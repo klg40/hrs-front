@@ -29,6 +29,14 @@ jobs:
       - name: Run a one-line script
         run: echo Start action!
         
+      # Install dependency
+      - name: Install dependency
+        run:  npm i
+
+      # ls -la
+      - name: ls
+        run:  ls -la
+
       # Run build
       - name: Run build
-        run: npm install react-scripts | npm i | npm run build
+        run:  npm run build
