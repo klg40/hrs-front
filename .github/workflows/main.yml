@@ -46,4 +46,4 @@ jobs:
 
       # Rsync
       - name: Rsync
-        run:  rsync -avz ./build/ ${{ secrets.HRS_LOGIN }}@${{ secrets.HRS_HOST }}:/var/www/html/
+        run:  rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./build/ ${{ secrets.HRS_LOGIN }}@${{ secrets.HRS_HOST }}:/var/www/html/
