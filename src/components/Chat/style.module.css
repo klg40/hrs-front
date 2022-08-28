@@ -1,0 +1,22 @@
+.chat {
+    display: flex;
+    width: 320px;
+    height: 100vh;
+    flex-direction: column;
+    float: right;
+}
+
+.messageBlock {
+    height: calc(100vh - 100px);
+    background-color: #231f44;
+    padding: 12px;
+    flex-grow: 10;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.inputBlock {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}

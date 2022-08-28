@@ -1,0 +1,10 @@
+.textContainer {
+    font-size: 12px;
+    background-color: #767d83;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.textContainer:not(:last-child) {
+    margin-bottom: 12px;
+}
