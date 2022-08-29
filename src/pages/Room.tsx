@@ -13,7 +13,7 @@ const Room = () => {
 
     useEffect(() => {
         socket.emit(_serverInteractionActions.joinToRoom, roomId);
-    }, [])
+    }, [roomId])
 
     if (!roomId) return <h1>Room id not found</h1>;
 
