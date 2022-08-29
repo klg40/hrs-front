@@ -1,5 +1,5 @@
 import React,{ ChangeEvent, useCallback, useEffect, useState } from 'react';
-import { Chip, Textarea, Button } from '@mantine/core';
+import { Textarea, Button } from '@mantine/core';
 import { TextContainer } from "./TextContainer";
 import { _chatActions } from "../../constracts/actions";
 
