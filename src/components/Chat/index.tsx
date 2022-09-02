@@ -26,6 +26,7 @@ const Chat = ({ socket }: { socket: Record<string, any> }) => {
     useEffect(() => {
         if (!isMount) {
             socket.on(_chatActions.getAllMessages, setMessages);
+
             socket.on(_chatActions.updateMessages, (message: any) => {
                 console.log('update message')
                 setMessages(prevValue => [...prevValue, message]);
@@ -38,7 +39,7 @@ const Chat = ({ socket }: { socket: Record<string, any> }) => {
         <div className={style.chat}>
             <div className={style.messageBlock}>
                 { messages.map(({ text }: any) => (
-                    <TextContainer key={text}>{ text }</TextContainer>
+                    <TextContainer key={String(Math.random() + text)}>{ text }</TextContainer>
                 )) }
             </div>
             <div className={style.inputBlock}>
@@ -54,7 +55,9 @@ const Chat = ({ socket }: { socket: Record<string, any> }) => {
                     radius="xs"
                     onClick={sendMessage}
                     sx={{ outline: 'none' }}
-                >Send message</Button>
+                >
+                    Send message
+                </Button>
             </div>
         </div>
     );
