@@ -4,6 +4,7 @@ import { getHash } from "../utils/hash";
 
 const Welcome = () => {
     const roomId = useMemo(() => getHash(), [])
+    console.log(123)
 
     return (
         <div>
